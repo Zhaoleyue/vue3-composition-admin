@@ -110,15 +110,6 @@
         </template>
       </el-table-column>
       <el-table-column
-        :label="t('table.date')"
-        width="180px"
-        align="center"
-      >
-        <template #default="{row}">
-          <span>{{ row.timestamp }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column
         :label="t('table.title')"
         min-width="150px"
       >
@@ -130,6 +121,15 @@
             row.title
           }}</span>
           <el-tag>{{ row.type }}</el-tag>
+        </template>
+      </el-table-column>
+      <el-table-column
+        :label="t('table.remark')"
+        width="180px"
+        align="center"
+      >
+        <template #default="{row}">
+          <span>{{ row.remark }}</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -394,10 +394,10 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const calendarTypeOptions = [
-      { key: 'CN', displayName: 'China' },
-      { key: 'US', displayName: 'USA' },
-      { key: 'JP', displayName: 'Japan' },
-      { key: 'EU', displayName: 'Eurozone' }
+      { key: '重庆', displayName: '重庆' },
+      { key: '北京', displayName: '北京' },
+      { key: '上海', displayName: '上海' },
+      { key: '深圳', displayName: '' }
     ]
 
     const calendarTypeKeyValue = calendarTypeOptions.reduce(
@@ -422,7 +422,7 @@ export default defineComponent({
         sort: '+id'
       },
 
-      importanceOptions: [1, 2, 3],
+      importanceOptions: ['销售类', '产品类', '其他类'],
       calendarTypeOptions: calendarTypeOptions,
       sortOptions: [
         { label: 'ID Ascending', key: '+id' },

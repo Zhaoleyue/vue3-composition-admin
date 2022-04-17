@@ -20,53 +20,7 @@
 
       <el-table-column
         width="180px"
-        align="center"
-        label="Date"
-      >
-        <template #default="{row}">
-          <span>{{ row.timestamp }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        align="center"
-        label="Author"
-        width="180px"
-      >
-        <template #default="{row}">
-          <span>{{ row.author }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        width="105px"
-        label="Importance"
-      >
-        <template #default="{row}">
-          <svg-icon
-            v-for="n in +row.importance"
-            :key="n"
-            name="star"
-            class="meta-item__icon"
-          />
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        class-name="status-col"
-        label="Status"
-        width="110"
-      >
-        <template #default="{row}">
-          <el-tag :type="row.status ">
-            {{ row.status }}
-          </el-tag>
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        min-width="250px"
-        label="Title"
+        label="岗位名称"
       >
         <template #default="{row}">
           <template v-if="row.edit">
@@ -90,6 +44,52 @@
       </el-table-column>
 
       <el-table-column
+        min-width="300px"
+        align="center"
+        label="岗位描述"
+      >
+        <template #default="{row}">
+          <span>{{ row.remark }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        align="center"
+        label="发布者"
+        width="180px"
+      >
+        <template #default="{row}">
+          <span>{{ row.author }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        width="105px"
+        label="类型"
+      >
+        <template #default="{row}">
+          <svg-icon
+            v-for="n in +row.importance"
+            :key="n"
+            name="star"
+            class="meta-item__icon"
+          />
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        class-name="status-col"
+        label="发布状态"
+        width="110"
+      >
+        <template #default="{row}">
+          <el-tag :type="row.status ">
+            {{ row.status }}
+          </el-tag>
+        </template>
+      </el-table-column>
+
+      <el-table-column
         align="center"
         label="Actions"
         width="120"
@@ -108,10 +108,9 @@
             v-else
             type="primary"
             size="small"
-            icon="el-icon-edit"
             @click="row.edit = !row.edit"
           >
-            Edit
+            投递
           </el-button>
         </template>
       </el-table-column>

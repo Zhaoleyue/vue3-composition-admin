@@ -9,12 +9,12 @@
 <template>
   <div class="login-container">
     <video
-      poster="../../../assets/images/login/video-cover.jpeg"
+      poster="../../../assets/images/login/LoginBack.png"
       loop
       autoplay
       muted
     >
-      <source src="../../../assets/images/login/night.mp4">
+      <source src="../../../assets/images/login/LoginBack.png">
     </video>
 
     <el-form
@@ -95,12 +95,7 @@
 
       <div style="position:relative">
         <div class="tips">
-          <span>{{ t("login.username") }} : admin </span>
-          <span>{{ t("login.password") }} : {{ t("login.any") }} </span>
-        </div>
-        <div class="tips">
-          <span>{{ t("login.username") }} : editor </span>
-          <span>{{ t("login.password") }} : {{ t("login.any") }} </span>
+          <p>Made by coconute</p>
         </div>
 
         <el-button
@@ -271,7 +266,7 @@ export default defineComponent({
       color: $loginCursorColor;
     }
     input::first-line {
-      color: $lightGray;
+      color: black;
     }
   }
 }
@@ -288,13 +283,13 @@ export default defineComponent({
       border: 0px;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: $lightGray;
+      color: black;
       caret-color: $loginCursorColor;
       -webkit-appearance: none;
 
       &:-webkit-autofill {
         box-shadow: 0 0 0px 1000px $loginBg inset !important;
-        -webkit-text-fill-color: #fff !important;
+        -webkit-text-fill-color: black !important;
       }
     }
   }
@@ -334,7 +329,7 @@ export default defineComponent({
 
   .tips {
     font-size: 14px;
-    color: #fff;
+    color: black;
     margin-bottom: 10px;
 
     span {
@@ -346,7 +341,7 @@ export default defineComponent({
 
   .svg-container {
     padding: 6px 5px 6px 15px;
-    color: $darkGray;
+    color: black;
     vertical-align: middle;
     width: 30px;
     display: inline-block;
@@ -357,14 +352,14 @@ export default defineComponent({
 
     .title {
       font-size: 26px;
-      color: $lightGray;
+      color: black;
       margin: 0px auto 40px auto;
       text-align: center;
       font-weight: bold;
     }
 
     .set-language {
-      color: #fff;
+      color: black;
       position: absolute;
       top: 3px;
       font-size: 18px;
@@ -378,7 +373,7 @@ export default defineComponent({
     right: 10px;
     top: 7px;
     font-size: 16px;
-    color: $darkGray;
+    color: black;
     cursor: pointer;
     user-select: none;
   }

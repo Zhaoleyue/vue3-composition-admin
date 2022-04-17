@@ -34,7 +34,7 @@
           :src="Logo"
         >
         <h1 class="sidebar-title">
-          Vue<span style="color:#57CAEB">3</span>管理后台
+          椰子<span style="color:#57CAEB">的</span>招聘系统
         </h1>
       </router-link>
     </transition>
